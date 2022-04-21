@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="title">Таблица цветов</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="table-overflow">
+                <table border="1" bordercolor="#333333" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Цвет</th>
+                            <th>Название</th>
+                            <th>Тип</th>
+                            <th>Код</th>
+                            <th>Изменить</th>
+                            <th>Удалить</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-btn">
+                <button class="btn js-open">Добавить цвет</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal hidden">
+        <div class="container">
+            <div class="close">&#x2715;</div>
+            <h2 class="title">Добавление цвета</h2>
+            <form class="form">
+                <div class="form-input">
+                    <label for="name">Название цвета</label>
+                    <input id="name" name="name" type="text" placeholder="Введите название" required>
+                </div>
+                <div class="form-input">
+                    <label for="type">Выберите тип</label>
+                    <select name="type" id="type" required>
+                        <option value="main">Main</option>
+                        <option value="primary">Primary</option>
+                        <option value="secondary">Secondary</option>
+                        <option value="base">Base</option>
+                    </select>
+                </div>
+                <div class="form-bottom">
+                    <input type="color" name="color" required>
+                    <button type="submit" class="btn">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+:root {
+    --bg: #333333;
+    --bg-table: #424242;
+    --gray: #BFBFBF;
+    --blue: #53CBF1;
+    --white: #fff;
+    --red: #CA4C4C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 680px;
+    width: 100%;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+table {
+    background: var(--bg-table);
+    width: 100%;
+}
+
+table div {
+    color: var(--gray);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+table .table-color {
+    width: 40px;
+    height: 40px;
+}
+
+table td, table th {
+    min-height: 54px;
+    padding: 7px 15px;
+}
+
+table td {
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+table th {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+}
+
+table .delete, table .update {
+    text-align: center;
+    cursor: pointer;
+}
+
+table .delete svg path,
+table .delete svg rect,
+table .update svg path {
+    transition: all .5s;
+}
+
+table .delete:hover svg path,
+table .delete:hover svg rect {
+    fill: var(--red);
+}
+
+table .update:hover svg path {
+    stroke: var(--blue);
+}
+
+.table-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn {
+    border: 1px solid var(--blue);
+    border-radius: 100px;
+    min-width: 220px;
+    height: 35px;
+    color: var(--white);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px var(--blue);
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .container {
+    position: relative;
+    padding: 0 10px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal form label {
+    color: var(--gray);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+.modal form .form-input {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 20px;
+    column-gap: 10px;
+}
+
+.modal form input,
+.modal form .form-input {
+    max-width: 400px;
+    width: 100%;
+}
+
+.modal .btn {
+    background-color: var(--blue);
+    margin-top: 20px;
+}
+
+.modal form input,
+.modal form select {
+    height: 40px;
+    background: var(--bg-table);
+    border: 1px solid #5F5F5F;
+    outline: none;
+    border-radius: 6px;
+    color: var(--white);
+    padding: 0 15px;
+}
+
+.modal form input[type=color] {
+    height: 200px;
+    padding: 0;
+}
+
+.modal form .form-bottom {
+    max-width: 400px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.modal .close {
+    color: var(--white);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.table-overflow {
+    overflow: auto;
+}
