@@ -1,0 +1,75 @@
+table {
+    background: $bg-table;
+    width: 100%;
+
+    div {
+        color: $gray;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .table-color {
+        width: 40px;
+        height: 40px;
+    }
+
+    td, th {
+        min-height: 54px;
+        padding: 7px 15px;
+    }
+
+    td {
+        color: $gray;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    th {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: $white;
+    }
+
+    .delete, .update {
+        text-align: center;
+        cursor: pointer;
+
+        svg {
+            path, rect {
+                transition: all .5s;
+            }
+        }
+    }
+
+    .delete {
+        &:hover {
+            svg {
+                path, rect {
+                    fill: $red;
+                }
+            }
+        }
+    }
+
+    .update {
+        &:hover {
+            svg {
+                path {
+                    stroke: $blue;
+                }
+            }
+        }
+    }
+}
+
+.table-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.table-overflow {
+    overflow: auto;
+}
