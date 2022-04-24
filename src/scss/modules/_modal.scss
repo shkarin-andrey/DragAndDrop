@@ -1,0 +1,84 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .container {
+    position: relative;
+    padding: 0 10px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal form label {
+    color: $gray;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+.modal form .form-input {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 20px;
+    column-gap: 10px;
+}
+
+.modal form input,
+.modal form .form-input {
+    max-width: 400px;
+    width: 100%;
+}
+
+.modal {
+    form {
+        .btn {
+            background-color: $blue;
+            margin-top: 20px;
+        }
+
+        input, select {
+            height: 40px;
+            background: $bg-table;
+            border: 1px solid #5F5F5F;
+            outline: none;
+            border-radius: 6px;
+            color: $white;
+            padding: 0 15px;
+        }
+
+        input[type=color] {
+            height: 200px;
+            padding: 0;
+        }
+
+        .form-bottom {
+            max-width: 400px;
+            width: 100%;
+            padding: 0 30px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    }
+    .close {
+        color: $white;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+} 
